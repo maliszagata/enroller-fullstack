@@ -32,8 +32,6 @@ public class MeetingService {
     }
 
     public Collection<MeetingResponse> getAll() {
-        String hql = "FROM Meeting";
-        Query query = connector.getSession().createQuery(hql);
         List<Meeting> list = connector.getSession().createQuery("select m from Meeting m").list();
         List<MeetingResponse> meetingResponses = list.stream().map(meeting -> new MeetingResponse(meeting.getId(), meeting.getName(), meeting.getDescription(),
                 meeting.getParticipants().stream().map(Participant::getLogin).collect(Collectors.toSet()))).collect(Collectors.toList());
