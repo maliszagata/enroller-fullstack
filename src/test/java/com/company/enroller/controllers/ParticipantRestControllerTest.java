@@ -27,26 +27,26 @@ import com.company.enroller.persistence.ParticipantService;
 @WebMvcTest(ParticipantRestController.class)
 public class ParticipantRestControllerTest {
 
-	@Autowired
-	private MockMvc mvc;
+    @Autowired
+    private MockMvc mvc;
 
-	@MockBean
-	private MeetingService meetingService;
+    @MockBean
+    private MeetingService meetingService;
 
-	@MockBean
-	private ParticipantService participantService;
+    @MockBean
+    private ParticipantService participantService;
 
-	@Test
-	public void getParticipants() throws Exception {
-//		Participant participant = new Participant();
-//		participant.setLogin("testlogin");
-//		participant.setPassword("testpassword");
+    @Test
+    public void getParticipants() throws Exception {
+//        Participant participant = new Participant();
+//        participant.setLogin("testlogin");
+//        participant.setPassword("testpassword");
 //
-//		Collection<Participant> allParticipants = singletonList(participant);
-//		given(participantService.getAll()).willReturn(allParticipants);
+//        Collection<Participant> allParticipants = singletonList(participant);
+//        given(participantService.getAll()).willReturn(allParticipants);
 //
-//		mvc.perform(get("/api/participants").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
-//				.andExpect(jsonPath("$", hasSize(1))).andExpect(jsonPath("$[0].login", is(participant.getLogin())));
-	}
+//        mvc.perform(get("/api/participants").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+//                .andExpect(jsonPath("$", hasSize(1))).andExpect(jsonPath("$[0].login", is(participant.getLogin())));
+    }
 
 }
